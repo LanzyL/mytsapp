@@ -1,4 +1,32 @@
 //===================================================================
+// Activity 1
+//===================================================================
+
+const numberOne: number = 1; // number type variable
+const isActive: boolean = true; // boolean type variable
+const name: string = "John Doe"; // string type variable
+const numbers: number[] = [1, 2, 3, 4, 5]; // array of numbers
+
+function greet(person: string): string {
+    return `Hello, ${person}`; // Added backticks for template literal
+}
+
+// Conditional types below
+type IsString<T> = T extends string ? "Yes" : "No";
+
+type Test1 = IsString<string>; // "Yes"
+type Test2 = IsString<number>; // "No"
+
+console.log(numberOne); 
+console.log(isActive);
+console.log(name);
+console.log(numbers);
+
+console.log(greet(name)); // greet function call    
+
+
+
+//===================================================================
 // Activity 2: Typescript Basics
 //===================================================================
 
@@ -127,7 +155,7 @@ function printReceipt(customer: string, cartItems: CartItem[], isStudent: boolea
     console.log(`${item.name} x${item.qty} @ ₱${item.price} = ₱${lineTotal}`);
   }
   
-  const subtotal = getCartTotal(cartItems);
+  const subtotal = getCartTotal(cartItems); 
   const finalTotal = applyDiscount(subtotal, isStudent);
   const discountAmount = subtotal - finalTotal;
 
