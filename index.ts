@@ -4,7 +4,7 @@
 
 const numberOne: number = 1; // number type variable
 const isActive: boolean = true; // boolean type variable
-const name: string = "John Doe"; // string type variable
+const name: string = "Lance Llaban"; // string type variable
 const numbers: number[] = [1, 2, 3, 4, 5]; // array of numbers
 
 function greet(person: string): string {
